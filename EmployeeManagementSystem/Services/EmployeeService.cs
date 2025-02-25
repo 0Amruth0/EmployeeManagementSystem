@@ -3,6 +3,7 @@ using EmployeeManagementSystem.Data;
 using EmployeeManagementSystem.Models;
 using System.Collections.Generic;
 using System.Data;
+using System.Collections;
 
 namespace EmployeeManagementSystem.Services
 {
@@ -23,9 +24,9 @@ namespace EmployeeManagementSystem.Services
             _logger.Information($"Log: Employee {emp.Name} added successfully!");
         }
 
-        public void UpdateEmployee(Employee emp)
+        public void UpdateEmployee(Employee emp,int action)
         {
-            _repository.Update(emp);
+            _repository.Update(emp, action);
             _logger.Information($"Log: Employee {emp.Name} updated successfully!");
         }
 

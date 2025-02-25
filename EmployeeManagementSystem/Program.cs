@@ -3,6 +3,7 @@ using Serilog;
 using EmployeeManagementSystem.Data;
 using EmployeeManagementSystem.Models;
 using EmployeeManagementSystem.Services;
+using System.Collections.Generic;
 
 namespace EmployeeManagementSystem
 {
@@ -50,8 +51,10 @@ namespace EmployeeManagementSystem
                         break;
 
                     case 3:
-                        Employee emp = UpdateEmp();
-                        service.UpdateEmployee(emp);
+                        object[] arr = UpdateEmp();
+                        Employee emp = (Employee)arr[0];
+                        int act = Convert.ToInt32(arr[1]);
+                        service.UpdateEmployee(emp,act);
                         break;
 
                     case 4:
@@ -102,26 +105,44 @@ namespace EmployeeManagementSystem
         }
 
         // Method to update an employee
-        public static Employee UpdateEmp()
+        public static Object[] UpdateEmp()
         {
             Employee employee = new Employee();
 
-            Console.WriteLine($"Enter Employee Name :");
-            employee.Name = Console.ReadLine();
-
-            Console.WriteLine($"Enter Employee Age :");
-            employee.Age = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine($"Enter Employee Department :");
-            employee.Department = Console.ReadLine();
-
-            Console.WriteLine($"Enter Employee Salary :");
-            employee.Salary = Convert.ToDecimal(Console.ReadLine());
-
             Console.WriteLine("Enter employee id : ");
-            int id = Console.ReadLine();
+            int id = Convert.ToInt32(Console.ReadLine());
+            employee.Id = id;
 
-            return employee;
+            Console.WriteLine("Press the corresponding number to access the functionality or 0 to exit");
+            Console.WriteLine("1. Update Name");
+            Console.WriteLine("2. Update Department");
+            Console.WriteLine("3. Update Salary");
+            Console.WriteLine("4. Update Age");
+            int action = Convert.ToInt32(Console.ReadLine());
+
+            switch (action)
+            {
+                case 1:
+                    Console.WriteLine($"Enter Employee Name :");
+                    employee.Name = Console.ReadLine();
+                    break;
+                case 2:
+                    Console.WriteLine($"Enter Employee Department :");
+                    employee.Department = Console.ReadLine();
+                    break;
+                case 3:
+                    Console.WriteLine($"Enter Employee Salary :");
+                    employee.Salary = Convert.ToDecimal(Console.ReadLine());
+                    break;
+                case 4:
+                    Console.WriteLine($"Enter Employee Age :");
+                    employee.Age = Convert.ToInt32(Console.ReadLine());
+                    break;
+                default:
+                    break;
+            }
+            object[] res = { employee, action };
+            return res;
         }
 
         // Method to delete an employee
