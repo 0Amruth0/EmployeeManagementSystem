@@ -1,0 +1,45 @@
+2025-02-17 08:44:51.812 +05:30 [FTL] An error occurred while running the application.
+System.ArgumentException: Format of the initialization string does not conform to specification starting at index 0.
+   at System.Data.Common.DbConnectionOptions.GetKeyValuePair(String connectionString, Int32 currentPosition, StringBuilder buffer, Boolean useOdbcRules, String& keyname, String& keyvalue)
+   at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at EmployeeManagementSystem.Data.Repository`1.Add(T entity) in C:\Learning\Practice Problems (4th Feb)\EmployeeManagementSystem\EmployeeManagementSystem\Data\Repository.cs:line 16
+   at EmployeeManagementSystem.Services.EmployeeService.AddEmployee(Employee emp) in C:\Learning\Practice Problems (4th Feb)\EmployeeManagementSystem\EmployeeManagementSystem\Services\EmployeeService.cs:line 22
+   at EmployeeManagementSystem.Program.Main() in C:\Learning\Practice Problems (4th Feb)\EmployeeManagementSystem\EmployeeManagementSystem\Program.cs:line 29
+2025-02-17 11:36:40.535 +05:30 [FTL] An error occurred while running the application.
+System.ArgumentException: Format of the initialization string does not conform to specification starting at index 0.
+   at System.Data.Common.DbConnectionOptions.GetKeyValuePair(String connectionString, Int32 currentPosition, StringBuilder buffer, Boolean useOdbcRules, String& keyname, String& keyvalue)
+   at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at EmployeeManagementSystem.Data.Repository`1.Add(T entity) in C:\Learning\Practice Problems (4th Feb)\EmployeeManagementSystem\EmployeeManagementSystem\Data\Repository.cs:line 16
+   at EmployeeManagementSystem.Services.EmployeeService.AddEmployee(Employee emp) in C:\Learning\Practice Problems (4th Feb)\EmployeeManagementSystem\EmployeeManagementSystem\Services\EmployeeService.cs:line 22
+   at EmployeeManagementSystem.Program.Main() in C:\Learning\Practice Problems (4th Feb)\EmployeeManagementSystem\EmployeeManagementSystem\Program.cs:line 29
+2025-02-17 11:44:04.427 +05:30 [FTL] An error occurred while running the application.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at EmployeeManagementSystem.Data.Repository`1..ctor() in C:\Learning\Practice Problems (4th Feb)\EmployeeManagementSystem\EmployeeManagementSystem\Data\Repository.cs:line 12
+   at EmployeeManagementSystem.Program.Main() in C:\Learning\Practice Problems (4th Feb)\EmployeeManagementSystem\EmployeeManagementSystem\Program.cs:line 22
+2025-02-17 11:48:32.522 +05:30 [FTL] An error occurred while running the application.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at EmployeeManagementSystem.Data.Repository`1..ctor() in C:\Learning\Practice Problems (4th Feb)\EmployeeManagementSystem\EmployeeManagementSystem\Data\Repository.cs:line 12
+   at EmployeeManagementSystem.Program.Main() in C:\Learning\Practice Problems (4th Feb)\EmployeeManagementSystem\EmployeeManagementSystem\Program.cs:line 22
+2025-02-17 11:49:26.625 +05:30 [INF] Employee John Doe added successfully!
+2025-02-17 11:49:26.686 +05:30 [INF] Employee with ID 1 deleted successfully!
+2025-02-17 11:49:33.849 +05:30 [INF] Employee John Doe added successfully!
+2025-02-17 11:49:33.910 +05:30 [INF] Employee with ID 1 deleted successfully!
+2025-02-17 12:02:15.062 +05:30 [INF] Employee John Doe added successfully!
+2025-02-17 12:02:15.113 +05:30 [INF] Employee with ID 1 deleted successfully!
+2025-02-17 12:52:03.398 +05:30 [INF] Log: Employee Lol singh added successfully!
